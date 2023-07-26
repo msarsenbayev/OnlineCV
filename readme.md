@@ -1,4 +1,4 @@
-View live demo here using github pages: [Live Demo](https://msarsenbayev.github.io/Digital-Resume/)
+View live demo here using github pages: [Live Demo](https://msarsenbayev.github.io/OnlineCV/)
 
 ## Switching between color themes
 
