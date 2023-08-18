@@ -1,20 +1,35 @@
 const toggleCheckbox = document.getElementById('toggle_checkbox');
 const body = document.body;
 
+// Retrieve the theme preference from localStorage
+const savedTheme = localStorage.getItem('theme');
+
+// Set the initial theme based on the saved preference
+if (savedTheme === 'dark') {
+    body.classList.add('light-mode');
+    updateToggleElements(true);
+} else {
+    updateToggleElements(false);
+}
+
 toggleCheckbox.addEventListener('change', () => {
     body.classList.toggle('light-mode');
-    updateToggleElements();
+    updateToggleElements(body.classList.contains('light-mode'));
+
+    // Save the theme preference to localStorage
+    const themeToSave = body.classList.contains('light-mode') ? 'dark' : 'light';
+    localStorage.setItem('theme', themeToSave);
 });
 
-// function updateToggleElements() {
-//     const stars = document.querySelectorAll('.star');
-//     const moon = document.getElementById('moon');
+function updateToggleElements(isDarkMode) {
+    const stars = document.querySelectorAll('.star');
+    const moon = document.getElementById('moon');
     
-//     if (toggleCheckbox.checked) {
-//         stars.forEach(star => star.style.color = '#fff'); // Change star color to white
-//         moon.style.backgroundColor = '#333'; // Change moon background color
-//     } else {
-//         stars.forEach(star => star.style.color = '#000'); // Reset star color
-//         moon.style.backgroundColor = '#f0f0f0'; // Reset moon background color
-//     }
-// }
+    if (isDarkMode) {
+        stars.forEach(star => star.style.color = '#fff');
+        moon.style.backgroundColor = '#333';
+    } else {
+        stars.forEach(star => star.style.color = '#000');
+        moon.style.backgroundColor = '#f0f0f0';
+    }
+}
