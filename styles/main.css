@@ -21,7 +21,7 @@
 
 }
 
-.dark-mode {
+.light-mode {
     --mainTextColor:var(--mainTextColor-light); 
     --secondaryTextColor:(--secondaryTextColor-light);
     --mainLinkColor:var(--mainLinkColor-light);
