@@ -24,13 +24,13 @@ body
 
 label {
     display: block;
-    position: absolute; /* Change from 'absolute' to 'fixed' */
-    top: 60px; /* Adjust the top position as needed */
-    right: 25px; /* Adjust the right position as needed */
-    width: 116px;
-    height: 56px;
+    position: absolute;
+    top: 60px;
+    right: 25px;
+    width: 92.8px; /* Adjusted width to be 20% smaller */
+    height: 44.8px; /* Adjusted height to be 20% smaller */
     background-color: #77b5fe;
-    border-radius: 56px;
+    border-radius: 44.8px; /* Adjusted border radius */
     transform: translateY(-50%);
     cursor: pointer;
     transition: 0.3s ease background-color;
@@ -40,10 +40,10 @@ label {
 #star
 {
     position: absolute;
-    top: 13px;
-    left: 13px;
-    width: 30px;
-    height: 30px;
+    top: 10.4px; /* Adjusted top position to account for smaller size */
+    left: 10.4px; /* Adjusted left position to account for smaller size */
+    width: 24px; /* Adjusted width to be 20% smaller */
+    height: 24px; /* Adjusted height to be 20% smaller */
     background-color: #fafd0f;
     transform: scale(1);
     border-radius: 50%;
@@ -65,9 +65,9 @@ label {
 .star
 {
     top: 0;
-    left: -7px;
-    font-size: 54px;
-    line-height: 28px;
+    left: -4.2px; /* Adjusted left position to account for smaller size */
+    font-size: 43.2px; /* Adjusted font size to be 20% smaller */
+    line-height: 22.4px; /* Adjusted line height to account for smaller size */
     color: #fafd0f;
     transition: 0.3s ease color;
 }
@@ -75,10 +75,10 @@ label {
 #moon
 {
     position: absolute;
-    bottom: -52px;
-    right: 8px;
-    width: 40px;
-    height: 40px;
+    bottom: -41.6px; /* Adjusted bottom position to account for smaller size */
+    right: 6.4px; /* Adjusted right position to account for smaller size */
+    width: 32px; /* Adjusted width to be 20% smaller */
+    height: 32px; /* Adjusted height to be 20% smaller */
     background-color: #fff;
     border-radius: 50%;
     transition: 0.3s ease bottom;
@@ -88,10 +88,10 @@ label {
 {
     content: "";
     position: absolute;
-    top: -12px;
-    left: -17px;
-    width: 40px;
-    height: 40px;
+    top: -9.6px; /* Adjusted top position to account for smaller size */
+    left: -13.6px; /* Adjusted left position to account for smaller size */
+    width: 32px; /* Adjusted width to be 20% smaller */
+    height: 32px; /* Adjusted height to be 20% smaller */
     background-color:#03a9f4;
     border-radius: 50%;
     transition: 0.3s ease background-color;
@@ -104,8 +104,8 @@ label {
 
 #toggle_checkbox:checked + label #star
 {
-    top: 3px;
-    left: 64px;
+    top: 2.4px; /* Adjusted top position to account for smaller size */
+    left: 51.2px; /* Adjusted left position to account for smaller size */
     transform: scale(0.3);
     background-color: yellow;
 }
@@ -117,7 +117,7 @@ label {
 
 #toggle_checkbox:checked + label #moon
 {
-    bottom: 8px;
+    bottom: 6.4px; /* Adjusted bottom position to account for smaller size */
 }
 
 #toggle_checkbox:checked + label #moon:before
@@ -125,6 +125,7 @@ label {
     background-color: #000;
 }
 </style>
+
 
 <html>
     <head>
