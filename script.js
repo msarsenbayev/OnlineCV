@@ -1,11 +1,13 @@
 const toggleCheckbox = document.getElementById('toggle_checkbox');
 const body = document.body;
 
+// let userToggled = false; // Track user's toggle action
+
 // Retrieve the theme preference from localStorage
 const savedTheme = localStorage.getItem('theme');
 
 // Set the initial theme based on the saved preference
-if (savedTheme === 'dark') {
+if (savedTheme === 'light') {
     body.classList.add('light-mode');
     updateToggleElements(true);
 } else {
@@ -17,15 +19,15 @@ toggleCheckbox.addEventListener('change', () => {
     updateToggleElements(body.classList.contains('light-mode'));
 
     // Save the theme preference to localStorage
-    const themeToSave = body.classList.contains('light-mode') ? 'dark' : 'light';
+    const themeToSave = body.classList.contains('light-mode') ? 'light' : 'dark';
     localStorage.setItem('theme', themeToSave);
 });
 
-function updateToggleElements(isDarkMode) {
+function updateToggleElements(isLightMode) {
     const stars = document.querySelectorAll('.star');
     const moon = document.getElementById('moon');
     
-    if (isDarkMode) {
+    if (isLightMode) {
         stars.forEach(star => star.style.color = '#fff');
         moon.style.backgroundColor = '#333';
     } else {
