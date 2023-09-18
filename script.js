@@ -1,7 +1,7 @@
 const toggleCheckbox = document.getElementById('toggle_checkbox');
 const body = document.body;
 
-// let userToggled = false; // Track user's toggle action
+let userToggled = false; // Track user's toggle action
 
 // Retrieve the theme preference from localStorage
 const savedTheme = localStorage.getItem('theme');
@@ -23,11 +23,12 @@ toggleCheckbox.addEventListener('change', () => {
     localStorage.setItem('theme', themeToSave);
 });
 
-function updateToggleElements(isLightMode) {
+
+function updateToggleElements(isDarkMode) {
     const stars = document.querySelectorAll('.star');
     const moon = document.getElementById('moon');
     
-    if (isLightMode) {
+    if (isDarkMode) {
         stars.forEach(star => star.style.color = '#fff');
         moon.style.backgroundColor = '#333';
     } else {
