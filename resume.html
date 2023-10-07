@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+
+<style>
+    *
+{
+    user-select: none;  
+}
+
+html, body
+{
+    height: 100%;
+}
+
+body
+{
+    margin: 0;
+    background-color: #fff;
+}
+
+#toggle_checkbox
+{
+    display: none;
+}
+
+label {
+    display: block;
+    position: absolute;
+    top: 54px; /* Adjusted top position */
+    right: 23px; /* Adjusted right position */
+    width: 83.52px; /* Adjusted width to be 10% smaller than previous */
+    height: 40.32px; /* Adjusted height to be 10% smaller than previous */
+    background-color: #77b5fe;
+    border-radius: 40.32px; /* Adjusted border radius */
+    border: 1.5px solid #fff;
+    border-color: white;
+    transform: translateY(-50%);
+    cursor: pointer;
+    transition: 0.3s ease background-color;
+    overflow: hidden;
+}
+
+#star
+{
+    position: absolute;
+    top: 9.36px; /* Adjusted top position */
+    left: 9.36px; /* Adjusted left position */
+    width: 21.6px; /* Adjusted width to be 10% smaller than previous */
+    height: 21.6px; /* Adjusted height to be 10% smaller than previous */
+    background-color: #fafd0f;
+    transform: scale(1);
+    border-radius: 50%;
+    transition: 0.3s ease top, 0.3s ease left, 0.3s ease transform, 0.3s ease background-color;
+    z-index: 1;
+}
+
+#star-1
+{
+    position: relative;
+}
+
+#star-2
+{
+    position: absolute;
+    transform: rotateZ(36deg);
+}
+
+.star
+{
+    top: 0;
+    left: -3.92px; /* Adjusted left position */
+    font-size: 38.88px; /* Adjusted font size to be 10% smaller than previous */
+    line-height: 20.16px; /* Adjusted line height to be 10% smaller than previous */
+    color: #fafd0f;
+    transition: 0.3s ease color;
+}
+
+#moon
+{
+    position: absolute;
+    bottom: -37.44px; /* Adjusted bottom position */
+    right: 5.76px; /* Adjusted right position */
+    width: 28.8px; /* Adjusted width to be 10% smaller than previous */
+    height: 28.8px; /* Adjusted height to be 10% smaller than previous */
+    background-color: #fff;
+    border-radius: 50%;
+    transition: 0.3s ease bottom;
+}
+
+#moon:before
+{
+    content: "";
+    position: absolute;
+    top: -8.64px; /* Adjusted top position */
+    left: -12.24px; /* Adjusted left position */
+    width: 28.8px; /* Adjusted width to be 10% smaller than previous */
+    height: 28.8px; /* Adjusted height to be 10% smaller than previous */
+    background-color:#03a9f4;
+    border-radius: 50%;
+    transition: 0.3s ease background-color;
+}
+
+#toggle_checkbox:checked + label
+{
+    background-color: #000;
+    color: #fff;
+}
+
+#toggle_checkbox:checked + label #star
+{
+    top: 2.16px; /* Adjusted top position */
+    left: 46.08px; /* Adjusted left position */
+    transform: scale(0.3);
+    background-color: yellow;
+}
+
+#toggle_checkbox:checked + label .star
+{
+    color: yellow;
+}
+
+#toggle_checkbox:checked + label #moon
+{
+    bottom: 5.76px; /* Adjusted bottom position */
+}
+
+#toggle_checkbox:checked + label #moon:before
+{
+    background-color: #000;
+}
+</style>
+
+
+
+<html>
+    <head>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-D9B2S4CNM1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-D9B2S4CNM1');
+        </script>
+        
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Massan Sarsenbayev - Data Analyst</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./styles/main.css?v=2">
+    </head>
+
+    <body>
+        <input type="checkbox" id="toggle_checkbox">
+        <label for="toggle_checkbox">
+        <div id="star">
+            <div class="star" id="star-1"></div>
+            <div class="star" id="star-2"></div>
+        </div>
+        <div id="moon"></div>
+        </label>
+        <div id="container--main">
+            <a href="index.html">&#x2190; Main Page</a>
+
+            <section id="wrapper--hero" class="section--page">
+                <img id="profile-pic" src="./assets/images/profile_pic.JPG">
+
+                <div>
+                    <h1 id="user-name">Massan Sarsenbayev</h1>
+                    <p id="bio">Entry Level Data Analyst, Full-Stack Development Enthusiast</p>
+                    <p id="bio">London, England, United Kingdom</p>
+                    <p id="email"><a href="mailto:massan.sarsenbayev@hotmail.com" class="s2" target="_blank">👉 massan.sarsenbayev@hotmail.com</a></p>
+                </div>  
+            </section>
+
+            <section class="section--page">
+        
+                <div id="socials--list">
+                    <a href="https://www.linkedin.com/in/msarsenbayev/" target="_blank">Linkedin</a>
+                    <a href="https://github.com/msarsenbayev" target="_blank">Github</a>
+                    <a href="./assets/resume.pdf" target="_blank">Download Resume</a>
+                    <a href="contactform.html" >Contact Me</a>
+                </div>
+            </section>
+
+            <section class="section--page">
+                <h2>Qualifications</h2>
+                <ul id="qualifications--list">
+                    Freshly graduated Data Analyst with distinction from London Metropolitan University with following qualifications:
+                    <br><br>
+                    <li>✔️ Data Analysis and Visualization</li>
+                    <li>✔️ Data Mining and Machine Learning</li>
+                    <li>✔️ Data Warehousing</li>
+                </ul>
+            </section>
+
+            </section>
+
+            <section class="section--page">
+                <h2>Skills</h2>
+
+
+                <h4>Data Analytics</h4>
+                <div id="wrapper--techstack__items">
+                    <div class="card--techstack"><span>Python, R</span></div>
+                    <div class="card--techstack"><span>SQL</span></div>
+                    <div class="card--techstack"><span>pandas, numpy, matplotlib, plotly, seaborn and more</span></div>
+                    <div class="card--techstack"><span>Power BI, Tableau</span></div>
+                    <div class="card--techstack"><span>Excel PivotTable</span></div>
+                </div>
+
+                <h4>Software Development</h4>
+                <div id="wrapper--techstack__items">
+                    <div class="card--techstack"><span>Python, JavaScript</span></div>
+                    <div class="card--techstack"><span>Django</span></div>
+                    <div class="card--techstack"><span>Postgres, MySQL</span></div>
+                    <div class="card--techstack"><span>HTML, CSS</span></div>
+                </div>
+            </section>
+
+
+            <section id="work-history-wrapper" class="section--page">
+                <h2>Education</h2>
+
+                <div class="line-break"></div>
+                <div class="card--work-history">
+                    <strong>🎓 London Metropolitan University</strong>
+                    <br>
+                    <strong>📜 MSc Data Analytics</strong>
+                    <p>01/2022 - 07/2023</p>
+                    <p>Successfully completed modules:</p>
+                    <ul>
+                        <li>Data Mining and Machine Learning</li>
+                        <li>Statistical Modelling and Forecasting</li>
+                        <li>Programming for Data Analytics (Python, R)</li>
+                        <li>Data Warehousing and Big Data</li>
+                        <li>Data Analysis and Visualization</li>
+                        <li>Financial Mathematics</li>
+                    </ul>
+                </div>
+
+                <div class="line-break"></div>
+            </section>
+
+            <!-- <section id="work-history-wrapper" class="section--page">
+                <h2>Work Experience</h2>
+
+                <div class="line-break"></div>
+                <div class="card--work-history">
+                    <strong>💼 DEVELOPER ADVOCATE | AGORA.IO</strong>
+                    <p>11/2021 - Present</p>
+                    <p>Worked on making Agora’s Web Based SDK more accessible through video tutorials, articles, demo projects and event based training. Also building out React UI components & leading a team to re-design Agora’s documentation and api reference.</p>
+                </div>
+
+                <div class="line-break"></div>
+
+            </section> -->
+
+            <section class="section--page">
+                <h2>Certificates</h2>
+
+                <div class="card--project">
+                    <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/KD4NYTQHW2QR" target="_blank"><span></span>📚 Google Data Analytics Specialization</a>
+                </div>
+
+                <div class="card--project">
+                    <a href="https://www.coursera.org/account/accomplishments/certificate/4GNGAXEWU3B9" target="_blank"><span></span>📚 Machine Learning</a>
+                </div>
+
+                <div class="card--project">
+                    <a href="./assets/CertificateOfCompletion_Advanced SQL for Data Scientists.pdf" target="_blank"><span></span>📚 Advanced SQL for Data Scientists</a>
+                </div>
+
+            </section>
+
+            <section class="section--page">
+                <h2>Projects & Accomplishments</h2>
+
+                <div class="card--project">
+                    <a href="project1.html"><span>🏆 </span>Customer Segmentation Using K-Means Clustering</a>
+                </div>
+
+                <div class="card--project">
+                    <a href="project2.html" ><span>🏆 </span>Full-stack Data Management Application using Python Django Framework</a>
+                </div>
+
+                <div class="card--project">
+                    <a href="project3.html" ><span>🏆 </span>Scraping Google Maps Reviews for Analysis</a>
+                </div>
+
+            </section>
+
+
+       
+        </div>
+
+    </body>
+    <script src="script.js"></script>
+</html>

@@ -127,7 +127,239 @@ label {
 {
     background-color: #000;
 }
+
+#user-name {
+        font-family: 'Dancing Script', cursive
+    }
+
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@600&display=swap');
+
+/*font-family: 'Comfortaa', cursive;*/
+
+:root{
+    --tile-length: 17.5vmin;
+    --animation-duration: 8s;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.kaleidoscope{
+    position: relative;
+    width: calc(6 * .866 * var(--tile-length));
+    height: 90vmin;
+    -webkit-animation: rotation var(--animation-duration) linear infinite;
+            animation: rotation var(--animation-duration) linear infinite;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.kaleidoscope:after{
+    content:'';
+    position:absolute;
+    height: inherit;
+    width: inherit;
+    background: radial-gradient(circle at center, transparent 25%, var(--mainBgColor) 60%);
+    z-index: 10;
+}
+
+.container{
+    position: absolute;
+    width: calc(2 * var(--tile-length));
+    height: calc(2 * var(--tile-length));
+    border-radius: 50%;
+    overflow: hidden;
+    transform: translate( calc(var(--tile-length) * -0.134 ), -50%);
+}
+
+.container:nth-child(1){
+    top: 50%;
+    left: 0%;
+}
+
+.container:nth-child(2){
+    top: 50%;
+    left: calc(2 * calc(var(--tile-length) * 0.866 ));
+}
+
+.container:nth-child(3){
+    top: 50%;
+    left: calc(4 * calc(var(--tile-length) * 0.866 ));
+}
+
+.container:nth-child(4){
+    top: calc(50% - calc(1.5 * var(--tile-length)));
+    left: calc(var(--tile-length) * 0.866 );
+}
+
+.container:nth-child(5){
+    top: calc(50% - calc(1.5 * var(--tile-length)));
+    left: calc(3 * var(--tile-length) * 0.866 );
+}
+
+.container:nth-child(6){
+    top: calc(50% + calc(1.5 * var(--tile-length)));
+    left: calc(var(--tile-length) * 0.866 );
+}
+
+.container:nth-child(7){
+    top: calc(50% + calc(1.5 * var(--tile-length)));
+    left: calc(3 * var(--tile-length) * 0.866 );
+}
+
+@-webkit-keyframes rotation{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotation{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.tile{
+    position: absolute;
+    top: 28%;
+    left: 25%;
+    width: var(--tile-length);
+    height: calc(var(--tile-length) * 0.866);
+    -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tile:nth-child(1){
+    transform: rotate(30deg) translateY(50%) scaleX(-1);
+}
+
+.tile:nth-child(2){
+    transform: rotate(90deg) translateY(50%);
+}
+
+.tile:nth-child(3){
+    transform: rotate(150deg) translateY(50%) scaleX(-1);
+}
+
+.tile:nth-child(4){
+    transform: rotate(210deg) translateY(50%);
+}
+
+.tile:nth-child(5){
+    transform: rotate(270deg) translateY(50%) scaleX(-1);
+}
+
+.tile:nth-child(6){
+    transform: rotate(330deg) translateY(50%);
+}
+
+.texture{
+    position: absolute;
+    height: calc(1.75 * var(--tile-length));
+    width: calc(1.75 * var(--tile-length));
+    background-image: url(https://zupimages.net/up/21/39/6p27.png);
+    background-size: 100%;
+    -webkit-animation: rotation var(--animation-duration) linear infinite;
+            animation: rotation var(--animation-duration) linear infinite;
+}
+
+
+.link {
+  position: fixed;
+  z-index: 10;
+  left: calc(2.5vmin - .75rem);
+  bottom: calc(2.5vmin - .75rem);
+  font-size: 1.5rem;
+  font-family: arial, sans-serif;
+  color: whitesmoke;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.my-name {
+  position: relative;
+}
+
+.before, .after {
+  overflow: hidden;
+  width: 0px;
+  transition: width .5s;
+  transform-origin: right;
+}
+
+.before-text {
+  display: inline-block;
+  width: auto;
+  text-align: right;
+}
+
+.after-text {
+  display: flex;
+  align-items: center;
+  width: auto;
+  height: 3rem;
+  transform-origin: top center;
+}
+
+.link:hover .before {
+  width: 2.5rem;
+}
+
+.link:hover .after {
+  width: 4rem;
+}
+
+.link:hover .spin {
+  display: inline-block;
+  transition: .5s transform .5s ease-in-out;
+  transform: rotate(360deg);
+}
+
+
+#navbar{
+    display: flex;
+    /* justify-content: space-between; */
+    column-gap: 1em;
+    flex-wrap: wrap;
+}
+
+#navbar a{
+    font-weight: 300;
+    color: var(--secondaryTextColor);
+    font-size: 0.7em;
+    transition: 0.3s;
+}
+
+#navbar a:hover{
+    font-weight: 100;
+    color: var(--mainLinkColor);
+    font-size: 0.9em;
+}
+
+
 </style>
+
 
 
 
@@ -151,9 +383,10 @@ label {
         <link rel="stylesheet" href="./styles/main.css?v=2">
     </head>
 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dancing+Script">
+
     <body>
         <input type="checkbox" id="toggle_checkbox">
-
         <label for="toggle_checkbox">
         <div id="star">
             <div class="star" id="star-1"></div>
@@ -161,30 +394,28 @@ label {
         </div>
         <div id="moon"></div>
         </label>
+
         <div id="container--main">
 
             <section id="wrapper--hero" class="section--page">
-                <img id="profile-pic" src="./assets/images/profile_pic.JPG">
+                <!-- <img id="profile-pic" src="./assets/images/profile_pic.JPG"> -->
 
                 <div>
-                    <h1 id="user-name">Massan Sarsenbayev</h1>
-                    <p id="bio">Entry Level Data Analyst, Full-Stack Development Enthusiast</p>
-                    <p id="bio">London, England, United Kingdom</p>
-                    <p id="email"><a href="mailto:massan.sarsenbayev@hotmail.com" class="s2" target="_blank">👉 massan.sarsenbayev@hotmail.com</a></p>
+                    <center>
+                        <h1 id="user-name">Massan Sarsenbayev</h1>
+                    </center>
                 </div>  
             </section>
 
             <section class="section--page">
         
-                <div id="socials--list">
-                    <a href="https://www.linkedin.com/in/msarsenbayev/" target="_blank">Linkedin</a>
-                    <a href="https://github.com/msarsenbayev" target="_blank">Github</a>
-                    <a href="./assets/resume.pdf" target="_blank">Download Resume</a>
-                    <a href="contactform.html" >Contact Me</a>
+                <div id="navbar">
+                    <h2><a href="resume.html" >Resume</a></h2>
+                    <h2><a href="mainblogpage.html" >Personal Blog</a></h2>
                 </div>
             </section>
 
-            <section class="section--page">
+            <!-- <section class="section--page">
                 <h2>Qualifications</h2>
                 <ul id="qualifications--list">
                     Freshly graduated Data Analyst with distinction from London Metropolitan University with following qualifications:
@@ -193,106 +424,157 @@ label {
                     <li>✔️ Data Mining and Machine Learning</li>
                     <li>✔️ Data Warehousing</li>
                 </ul>
-            </section>
-
-            </section>
-
-            <section class="section--page">
-                <h2>Skills</h2>
-
-
-                <h4>Data Analytics</h4>
-                <div id="wrapper--techstack__items">
-                    <div class="card--techstack"><span>Python, R</span></div>
-                    <div class="card--techstack"><span>SQL</span></div>
-                    <div class="card--techstack"><span>pandas, numpy, matplotlib, plotly, seaborn and more</span></div>
-                    <div class="card--techstack"><span>Power BI, Tableau</span></div>
-                    <div class="card--techstack"><span>Excel PivotTable</span></div>
-                </div>
-
-                <h4>Software Development</h4>
-                <div id="wrapper--techstack__items">
-                    <div class="card--techstack"><span>Python, JavaScript</span></div>
-                    <div class="card--techstack"><span>Django</span></div>
-                    <div class="card--techstack"><span>Postgres, MySQL</span></div>
-                    <div class="card--techstack"><span>HTML, CSS</span></div>
-                </div>
-            </section>
-
-
-            <section id="work-history-wrapper" class="section--page">
-                <h2>Education</h2>
-
-                <div class="line-break"></div>
-                <div class="card--work-history">
-                    <strong>🎓 London Metropolitan University</strong>
-                    <br>
-                    <strong>📜 MSc Data Analytics</strong>
-                    <p>01/2022 - 07/2023</p>
-                    <p>Successfully completed modules:</p>
-                    <ul>
-                        <li>Data Mining and Machine Learning</li>
-                        <li>Statistical Modelling and Forecasting</li>
-                        <li>Programming for Data Analytics (Python, R)</li>
-                        <li>Data Warehousing and Big Data</li>
-                        <li>Data Analysis and Visualization</li>
-                        <li>Financial Mathematics</li>
-                    </ul>
-                </div>
-
-                <div class="line-break"></div>
-            </section>
-
-            <!-- <section id="work-history-wrapper" class="section--page">
-                <h2>Work Experience</h2>
-
-                <div class="line-break"></div>
-                <div class="card--work-history">
-                    <strong>💼 DEVELOPER ADVOCATE | AGORA.IO</strong>
-                    <p>11/2021 - Present</p>
-                    <p>Worked on making Agora’s Web Based SDK more accessible through video tutorials, articles, demo projects and event based training. Also building out React UI components & leading a team to re-design Agora’s documentation and api reference.</p>
-                </div>
-
-                <div class="line-break"></div>
-
             </section> -->
 
-            <section class="section--page">
-                <h2>Certificates</h2>
-
-                <div class="card--project">
-                    <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/KD4NYTQHW2QR" target="_blank"><span></span>📚 Google Data Analytics Specialization</a>
+            <section>
+                <!-- <h1 id="user-name">Massan Sarsenbayev</h1> -->
+                <div class="kaleidoscope">
+                    <div class="container">
+                        <div class="tile">
+                            <div class="texture"></div>
+                        </div>
+                        <div class="tile">
+                            <div class="texture"></div>
+                        </div>
+                        <div class="tile">
+                            <div class="texture"></div>
+                        </div>
+                        <div class="tile">
+                            <div class="texture"></div>
+                        </div>
+                        <div class="tile">
+                            <div class="texture"></div>
+                        </div>
+                        <div class="tile">
+                            <div class="texture"></div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="tile">
+                            <div class="texture"></div>
+                        </div>
+                        <div class="tile">
+                            <div class="texture"></div>
+                        </div>
+                        <div class="tile">
+                            <div class="texture"></div>
+                        </div>
+                        <div class="tile">
+                            <div class="texture"></div>
+                        </div>
+                        <div class="tile">
+                            <div class="texture"></div>
+                        </div>
+                        <div class="tile">
+                            <div class="texture"></div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="tile">
+                            <div class="texture"></div>
+                        </div>
+                        <div class="tile">
+                            <div class="texture"></div>
+                        </div>
+                        <div class="tile">
+                            <div class="texture"></div>
+                        </div>
+                        <div class="tile">
+                            <div class="texture"></div>
+                        </div>
+                        <div class="tile">
+                            <div class="texture"></div>
+                        </div>
+                        <div class="tile">
+                            <div class="texture"></div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="tile">
+                            <div class="texture"></div>
+                        </div>
+                        <div class="tile">
+                            <div class="texture"></div>
+                        </div>
+                        <div class="tile">
+                            <div class="texture"></div>
+                        </div>
+                        <div class="tile">
+                            <div class="texture"></div>
+                        </div>
+                        <div class="tile">
+                            <div class="texture"></div>
+                        </div>
+                        <div class="tile">
+                            <div class="texture"></div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="tile">
+                            <div class="texture"></div>
+                        </div>
+                        <div class="tile">
+                            <div class="texture"></div>
+                        </div>
+                        <div class="tile">
+                            <div class="texture"></div>
+                        </div>
+                        <div class="tile">
+                            <div class="texture"></div>
+                        </div>
+                        <div class="tile">
+                            <div class="texture"></div>
+                        </div>
+                        <div class="tile">
+                            <div class="texture"></div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="tile">
+                            <div class="texture"></div>
+                        </div>
+                        <div class="tile">
+                            <div class="texture"></div>
+                        </div>
+                        <div class="tile">
+                            <div class="texture"></div>
+                        </div>
+                        <div class="tile">
+                            <div class="texture"></div>
+                        </div>
+                        <div class="tile">
+                            <div class="texture"></div>
+                        </div>
+                        <div class="tile">
+                            <div class="texture"></div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="tile">
+                            <div class="texture"></div>
+                        </div>
+                        <div class="tile">
+                            <div class="texture"></div>
+                        </div>
+                        <div class="tile">
+                            <div class="texture"></div>
+                        </div>
+                        <div class="tile">
+                            <div class="texture"></div>
+                        </div>
+                        <div class="tile">
+                            <div class="texture"></div>
+                        </div>
+                        <div class="tile">
+                            <div class="texture"></div>
+                        </div>
+                    </div>
                 </div>
+            
 
-                <div class="card--project">
-                    <a href="https://www.coursera.org/account/accomplishments/certificate/4GNGAXEWU3B9" target="_blank"><span></span>📚 Machine Learning</a>
-                </div>
-
-                <div class="card--project">
-                    <a href="./assets/CertificateOfCompletion_Advanced SQL for Data Scientists.pdf" target="_blank"><span></span>📚 Advanced SQL for Data Scientists</a>
-                </div>
-
+            
             </section>
 
-            <section class="section--page">
-                <h2>Projects & Accomplishments</h2>
-
-                <div class="card--project">
-                    <a href="project1.html"><span>🏆 </span>Customer Segmentation Using K-Means Clustering</a>
-                </div>
-
-                <div class="card--project">
-                    <a href="project2.html" ><span>🏆 </span>Full-stack Data Management Application using Python Django Framework</a>
-                </div>
-
-                <div class="card--project">
-                    <a href="project3.html" ><span>🏆 </span>Scraping Google Maps Reviews for Analysis</a>
-                </div>
-
-            </section>
-
-
-       
         </div>
 
     </body>
