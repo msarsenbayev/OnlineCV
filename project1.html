@@ -3,7 +3,7 @@
 <style>
     table {
     margin: 0 auto;
-    width: auto;
+    width: 100%;
     border-collapse: collapse; /* This ensures that the borders of adjacent cells collapse into one */
     }
 
@@ -299,53 +299,55 @@
                     values for each variable:
                 </p>
 
-                <table>
-                    <caption>Customer groups by K-means clustering.</caption>
-                    <thead>
-                        <tr>
-                            <th>segment</th>
-                            <th>gender</th>
-                            <th>marital</th>
-                            <th>age</th>
-                            <th>edu.</th>
-                            <th>income</th>
-                            <th>occupat.</th>
-                            <th>settlement</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>0.709</td>
-                            <td>0.619</td>
-                            <td>31.26</td>
-                            <td>0.943</td>
-                            <td>97.5K</td>
-                            <td>0.429</td>
-                            <td>0.163</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>0.128</td>
-                            <td>0.279</td>
-                            <td>34.59</td>
-                            <td>0.766</td>
-                            <td>137.7K</td>
-                            <td>1.188</td>
-                            <td>1.340</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>0.498</td>
-                            <td>0.676</td>
-                            <td>55.72</td>
-                            <td>2.127</td>
-                            <td>155.6K</td>
-                            <td>1.076</td>
-                            <td>1.054</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div style="overflow-x:auto;">
+                    <table>
+                        <caption>Customer groups by K-means clustering.</caption>
+                        <thead>
+                            <tr>
+                                <th>segment</th>
+                                <th>gender</th>
+                                <th>marital</th>
+                                <th>age</th>
+                                <th>edu.</th>
+                                <th>income</th>
+                                <th>occupat.</th>
+                                <th>settlement</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>0.709</td>
+                                <td>0.619</td>
+                                <td>31.26</td>
+                                <td>0.943</td>
+                                <td>97.5K</td>
+                                <td>0.429</td>
+                                <td>0.163</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>0.128</td>
+                                <td>0.279</td>
+                                <td>34.59</td>
+                                <td>0.766</td>
+                                <td>137.7K</td>
+                                <td>1.188</td>
+                                <td>1.340</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>0.498</td>
+                                <td>0.676</td>
+                                <td>55.72</td>
+                                <td>2.127</td>
+                                <td>155.6K</td>
+                                <td>1.076</td>
+                                <td>1.054</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
 
                 <p> <b>"Group1"</b> is the female dominant group in their early thirties and
                     married. Customers in this segment living in small cities and working in
