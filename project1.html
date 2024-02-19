@@ -1,4 +1,19 @@
 <!DOCTYPE html>
+
+<style>
+    table {
+    margin: 0 auto;
+    width: auto;
+    border-collapse: collapse; /* This ensures that the borders of adjacent cells collapse into one */
+    }
+
+    td, th {
+    border: 1px solid black; /* This creates a solid black border around each cell */
+    padding: 8px; /* Optional: Add padding to cells for better readability */
+    }
+</style>
+
+
 <html>
     <head>
         <!-- Google tag (gtag.js) -->
@@ -42,6 +57,340 @@
                 <li>Cleaning and initial explarotary analisys of the data</li>
                 <li>Segmentation using K-Means Clustering</li>
             </ul>
+
+            <p> <h2>introduction</h2>
+
+                Although we understand the importance of the data, it is crucial to
+                properly manage data. It is a first step in effectively analysing data
+                which leads to important insights. The volume and speed data is
+                generated has grown beyond human comprehension in last decades. Even
+                most advanced technologies sometimes cannot handle all the available
+                datasets. And this is where data analytics steps in. Data can contain a
+                variety of useful information and studying it collectively can uncover
+                very minor patterns and details.</p>
+                
+                <div class="line-break"></div>
+                <p style="font-style: italic;">Things get done only if the data we gather can inform and
+                inspire those in a position to make a difference." -Dr.~Mike Schmoker.</p>
+                <div class="line-break"></div>
+                
+                <p>With the advancement of a big data, there has been a shift from
+                experience-based decision-making to a data-driven decision making in
+                upper management in businesses. Although data-driven decision is
+                powerful tool, but does not undermine the experience and expertise of
+                the leaders. Insights derived from data can help managers to approach
+                decision-making process on more reliable and concrete ground. Data
+                analytics can aid businesses in improving operations in different levels
+                by assessing metrics for effectiveness and process outcomes. It also
+                helps to identify financially unviable processes replacing it with more
+                enhanced streamlines. Data analytics enable businesses to constantly
+                monitor market trends to improve customer service or launch a new
+                product that can be positively received by customers. For example,
+                retailers can analyse customer purchasing process to better understand
+                the demand and their customer's buying habits. Even more, businesses can
+                quickly determine advertisements for their target demographic, which is
+                the main subject of this project.</p>
+
+                <h2>Data understanding</h2>
+                <p>
+                    Effective data analysis requires an understanding of the problem we are
+                    trying to solve. We need to know the questions we are hoping the get
+                    answer. The next step is to identify what information or what variables
+                    we need in order to answer those questions. In our case it is customer
+                    information with variables as below:
+                </p>
+
+                <ul>
+                    <li>customer_id - unique identification of a customer</li>
+                    <li>gender - gender of a customer - 0:Male - 1:Female</li>
+                    <li>marital_status - marital status of a customer - 0:Single - 1:Non-single</li>
+                    <li>age - age of a customer</li>
+                    <li>education - education level of a customer - 0:Unknown/other - 1:High-school - 2:University - 3:Graduate level</li>
+                    <li>income - reported annual income of a customer</li>
+                    <li>occupation - occupation of a customer - 0:Unemployed/Unskilled workers - 1:Skilled employees - 2:Highly qualified/Management positions</li>
+                    <li>settlement_size - size of a city the customer lives in - 0:Small city - 1:Mid-size city - 2:Big city</li>
+                </ul>
+
+                <h2>Exploratory analysis</h2>
+                <p>
+                    Next important step of data analysis process is Exploratory data
+                    analysis (EDA). EDA is used to look at the data and think about the data
+                    from many points of view. In order to better understand the pairwise
+                    relationship between variables we are using pair plot. This creates a
+                    visualization summarizing a important part (in our opinion) of our data
+                    in single figure.
+                </p>
+
+                <figure>
+                    <img src="./assets/images/project1/figure1.png" alt="Pair plot of variables." 
+            style="width: 100%; height: auto;">
+                    <center><figcaption>Pair plot of variables.</figcaption></center>
+                </figure>
+
+                <p>
+                    To better understand the important correlation coefficients we are using
+                    correlation matrix. From the heatmap below we see the positive
+                    correlation between "age" and "education". Or in other words older
+                    people tend to be more educated in our sample. From matrix we can see
+                    married people are more educated. And settlement size gets bigger by
+                    better job or occupation.
+                </p>
+
+                <figure>
+                    <img src="./assets/images/project1/figure2.png" alt="Correlation Heatmap of variables." 
+            style="width: 100%; height: auto;">
+                    <center><figcaption>Correlation Heatmap of variables.</figcaption></center>
+                </figure>
+
+                <p>
+                    One of the features in our data is "age". "Age is an important
+                    determinant of expenditure shares for every budget category. Expenditure
+                    shares increase with age for food at home, and to some extent, housing
+                    and health, but decrease with age for food away from home, apparel,
+                    transportation, and other purchases." To evaluate our customer's
+                    demographic we are plotting distribution plot of age. The average age of
+                    the customers is 35.9, the median is 33.0 and mode is 26 years old. Or
+                    people aged 26 is more frequent in dataset. According to statista.com
+                    most active and largest group of social media users in UK are people
+                    aged 18-34. It is 54% of our customers. Number of people in age group
+                    34-64 is 865 with 43% of customers. From the box plot there are 57
+                    customers aged 65 and above which are considered natural outliers. And
+                    we will not treat them as we would with artificial ones.
+                </p>
+
+                <figure>
+                    <img src="./assets/images/project1/figure3.png" alt="Data distribution in age and income variables." 
+            style="width: 100%; height: auto;"> 
+            <br>
+            <br>
+            <img src="./assets/images/project1/figure5.png" alt="Data distribution in age and income variables." 
+            style="width: 100%; height: auto;"> 
+                    <center><figcaption>Data distribution in age and income variables.</figcaption></center>
+                </figure>
+
+                <p>
+                    Gender plays a huge role in understanding people's purchasing habits.
+                    Gasiorowska reported the differences between
+                    male and female buying behaviours. According to the study "the male
+                    customers' buying behaviour is instrumental in nature and prefer minimal
+                    level of engagement and finish the purchasing process fast". On the
+                    other hand "females exhibit more impulsive buying behaviour than men,
+                    enjoy shopping more than men, and decide to buy products by evaluating
+                    various products in different stores rather than buying products from a
+                    single store". Keeping it in mind it is paramount to analyse
+                    distribution of age by gender of the customers. 1086 of customers are
+                    male out of 2000 with 54.3% of the total population. With average age
+                    of 38. Female customer's average age is slightly younger than the males
+                    with average 34 years old.
+                </p>
+
+                <figure>
+                    <img src="./assets/images/project1/figure4.png" alt="Density of the age by gender." 
+            style="width: 100%; height: auto;">
+                    <center><figcaption>Density of the age by gender.</figcaption></center>
+                </figure>
+
+                <p>
+                    Data distribution in "income" feature reveals that average income of
+                    the customers £120954. Most of the customers has annual income £69487.
+                    Fewer people have income starting from £200000. Those data shown as
+                    outliers in box plot in Figure 3. Average income distribution between
+                    males and females are not pronounced. Average annual income for males is
+                    £128K, for females £113K. Only 61 males out of 1086 earning from £200K,
+                    it is only 5.6%. This number is even small for females with 18 out of
+                    914. It is roughly 2% of females earning £200K and over annually.
+                </p>
+
+                <figure>
+                    <img src="./assets/images/project1/figure6.png" alt="Density of the income by gender." 
+            style="width: 100%; height: auto;">
+                    <center><figcaption>Density of the income by gender.</figcaption></center>
+                </figure>
+
+                <p>
+                    All age groups are represented in all three occupation types. Number of
+                    unskilled workers 633 (32%), skilled employees 1113 (56%) and highly
+                    qualified employees or managers 254 (12%) people of our total sample
+                    population. We see that income has positive correlation with age. But it
+                    is not as significant as with occupation type. More skilled the employee
+                    is more they are getting paid. Average income for unskilled workers is
+                    £91K, for skilled workers £125K, for highly qualified employees or
+                    managers it is £176K annually.
+                </p>
+
+                <figure>
+                    <img src="./assets/images/project1/figure7.png" alt="Income plot by occupation." 
+            style="width: 100%; height: auto;">
+                    <center><figcaption>Income plot by occupation.</figcaption></center>
+                </figure>
+
+                <p>
+                    We see gender imbalance among highly qualified employees and managing
+                    positions. Only 24% of highly qualified employees are females. On the
+                    contrary, majority of unskilled workers are filled with female workers
+                    with 57%. Male and female gender distribution is fairly evenly
+                    distributed in skilled employee group with 55% and 45% respectively.
+                </p>
+
+                <figure>
+                    <img src="./assets/images/project1/figure8.png" alt="Occupation plot by gender." 
+            style="width: 100%; height: auto;">
+                    <center><figcaption>Occupation plot by gender.</figcaption></center>
+                </figure>
+
+                <h2>K-means clustering</h2>
+                <p>
+                    K-means clustering is a method for ﬁnding clusters and cluster centres
+                    in a set of unlabelled data.
+                    It is important to segment customers to help the marketing team to
+                    launch a new product and use different advertising methods for different
+                    type of customer groups. Marketing and sales groups use k-means to
+                    better identify customers who have similar behaviours and spending
+                    patterns.</p>
+
+                    <p>We will try to find and group customers based on common characteristics
+                    such as age, gender, income, residing area, marital status and
+                    education. Before feeding our data into K-means model we need apply
+                    standardization to treat all the features equally. Standardization is
+                    achieved by "StandardScaler()" function of a python sklearn library.
+                    It is basically transforms the values of features to the same numerical
+                    values. After this process the data can be fed into the model.</p>
+
+                    <p>One of the fundamental steps in unsupervised learning using K-means is
+                    to determine "K" value. In order to identify number of clusters or
+                    optimal "K" value we are using the "Elbow method". Elbow methods
+                    objective is to find the smallest value of "K" that still has a low
+                    value of inertia. As seen in the
+                    Figure 8, the plot formed an elbow and value 3 or 4 would be optimal
+                    cluster formation.
+                </p>
+
+                <figure>
+                    <img src="./assets/images/project1/figure10.png" alt="K-value using 'Elbow method'." 
+            style="width: 100%; height: auto;">
+                    <center><figcaption>K-value using "Elbow method".</figcaption></center>
+                </figure>
+
+                <p>
+                    Once the K value identified we need to find values for centroid
+                    initialization. Centroid initialization can be done manually or
+                    randomly. When centroid values found we can create a plot with clusters
+                    or groups of customers with similarities. Our first segmentation with
+                    "age" and "income" variables shown in Figure 9. The algorithm
+                    segregated customers mostly by income value rather than age. In this
+                    cluster we used K value 4 and we have 4 groups.
+                </p>
+
+                <figure>
+                    <img src="./assets/images/project1/figure9.png" alt="K-means clustering with 'income' and 'age' attributes." 
+            style="width: 100%; height: auto;">
+                    <center><figcaption>K-means clustering with "income" and "age" attributes.</figcaption></center>
+                </figure>
+
+                <p>
+                    But we cannot use this as a final result as we did not consider all
+                    other variables. In order to segment customers by all features we are
+                    using "kmeans()" function. K-means algorithm finds the centroids for
+                    each cluster we decided to choose from elbow method. K-means find the
+                    best centroids by alternating between assigning data points to clusters
+                    based on the current centroids and choosing centroids based on the
+                    current assignment of data points to clusters.
+                    From below table we see three segment or group of customers with average
+                    values for each variable:
+                </p>
+
+                <table>
+                    <caption>Customer groups by K-means clustering.</caption>
+                    <thead>
+                        <tr>
+                            <th>segment</th>
+                            <th>gender</th>
+                            <th>marital</th>
+                            <th>age</th>
+                            <th>edu.</th>
+                            <th>income</th>
+                            <th>occupat.</th>
+                            <th>settlement</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>0.709</td>
+                            <td>0.619</td>
+                            <td>31.26</td>
+                            <td>0.943</td>
+                            <td>97.5K</td>
+                            <td>0.429</td>
+                            <td>0.163</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>0.128</td>
+                            <td>0.279</td>
+                            <td>34.59</td>
+                            <td>0.766</td>
+                            <td>137.7K</td>
+                            <td>1.188</td>
+                            <td>1.340</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>0.498</td>
+                            <td>0.676</td>
+                            <td>55.72</td>
+                            <td>2.127</td>
+                            <td>155.6K</td>
+                            <td>1.076</td>
+                            <td>1.054</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p> <b>"Group1"</b> is the female dominant group in their early thirties and
+                    married. Customers in this segment living in small cities and working in
+                    unskilled jobs or unemployed. The education level is lower than other
+                    two groups, average annual income is £98K.</p>
+                    <p><b>"Group2"</b> consists
+                        of mostly single men in their mid-thirties. They are skilled employees
+                        with average income £138K and living in mid-sized or big cities.</p> 
+                    <p><b>"Group3"</b> has same number of male and female customers who are married
+                        and highly educated. The average age for this group is 55 years old.
+                        Living in mid-sized city and with annual income £156K in skilled
+                        occupation.</p>
+
+                    <figure>
+                        <img src="./assets/images/project1/figure11.png" alt="Clustering customers by common characteristics." 
+                style="width: 100%; height: auto;">
+                        <center><figcaption>Clustering customers by common characteristics.</figcaption></center>
+                    </figure>
+
+                    <h2>Conclusion</h2>
+                    <p>
+                        We used several exploratory data analytics techniques and different
+                        types of data visualizations such as pair plots, distribution plots, box
+                        plots, correlation heatmap and scatter plots. From the results of
+                        K-means clustering model we found 3 different demographic and geographic
+                        group of customers. Each of these groups consists of customers from
+                        different locations, gender and age. First group consists of mostly from
+                        married women who lives in small cities. Second group majority is single
+                        men in their mid-30s living in big cities and working in skilled
+                        positions. Third group is the oldest group with average age of 55.
+                        Gender in this group evenly distributed by married women and men. This
+                        group also is highly educated group. Considering these each of them can
+                        be useful for different type of product advertisements.
+                    </p>
+
+                    <p>
+                        Customer's occupation plays important role in peoples purchasing habits.
+                        According to JingWu:ZhengLin customers have different
+                        consumption customs in different industries. Also, Gasiorowska reported that men and women differ in terms of
+                        shopping behaviour. Considering these companies should establish
+                        different marketing strategies for different targeted groups.
+                    </p>
+                
+                
+
         </div>
     </body>
     <script src="script.js"></script>
