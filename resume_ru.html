@@ -13,6 +13,7 @@ html, body
 
 body
 {
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     background-color: #fff;
 }
@@ -187,11 +188,10 @@ p {
         <div id="moon"></div>
         </label>
 
-        <select id="languageSelect" onchange="changeLanguageEn()">
-            <option value="en">English</option>
-            <option value="ru">Russian</option>
-          </select>
-          
+        <select id="languageSelect" onchange="changeLanguageRu()">
+            <option value="en">Russian</option>
+            <option value="ru">English</option>
+          </select>         
           
           
 
@@ -202,213 +202,160 @@ p {
                 <img id="profile-pic" src="./assets/images/profile_pic.JPG">
 
                 <div>
-                    <h1 id="user-name">Massan Sarsenbayev</h1>
-                    <p id="bio">Data Analyst, Data Engineering Enthusiast</p>
+                    <h1 id="user-name">Масан Сарсенбаев</h1>
+                    <p id="bio">Аналитик Данных</p>
                     <!-- <p id="bio">London, England, United Kingdom</p> -->
                     <p id="email"><a href="mailto:masan.sarsenbayev@gmail.com" class="s2" target="_blank">👉 masan.sarsenbayev@gmail.com</a></p>
                 </div>  
             </section>
 
             <section class="section--page">
-        
-                <div id="socials--list">
-                    <a href="https://www.linkedin.com/in/msarsenbayev/" target="_blank">Linkedin</a>
-                    <a href="https://github.com/msarsenbayev" target="_blank">Github</a>
-                    <a href="contactform.html" >Contact Me</a>
-                </div>
-            </section>
-
-            <section class="section--page">
-                <h2>Objective</h2>
+                <h2>Цель</h2>
                 <ul id="qualifications--list">
-                    <p>Data Analyst seeking full-time role in Data Analysis, Business intelligence or Data Science.</p>
+                    <p>Аналитик данных, ищет работу на полную ставку в области анализа данных, бизнес-аналитики или науки о данных.</p>
                     <p> </p>
                 </ul>
             </section>
-
-            </section>
-
+            
             <section class="section--page">
-                <h2>Skills</h2>
-
-
-                <!-- <h4>Data Analytics</h4> -->
+                <h2>Навыки</h2>
+            
                 <div id="wrapper--techstack__items">
                     <div class="card--techstack"><span>Python, R</span></div>
                     <div class="card--techstack"><span>SQL</span></div>
-                    <div class="card--techstack"><span>pandas, numpy, matplotlib, plotly, seaborn and more</span></div>
+                    <div class="card--techstack"><span>pandas, numpy, matplotlib, plotly, seaborn и другие</span></div>
                     <div class="card--techstack"><span>Power BI, Tableau</span></div>
                     <div class="card--techstack"><span>Excel PivotTable</span></div>
                 </div>
-
-                <!-- <h4>Software Development</h4>
-                <div id="wrapper--techstack__items">
-                    <div class="card--techstack"><span>Python, JavaScript</span></div>
-                    <div class="card--techstack"><span>Django</span></div>
-                    <div class="card--techstack"><span>Postgres, MySQL</span></div>
-                    <div class="card--techstack"><span>HTML, CSS</span></div>
-                </div> -->
             </section>
-
-
+            
             <section id="work-history-wrapper" class="section--page">
-                <h2>Education</h2>
-
+                <h2>Образование</h2>
+            
                 <div class="line-break"></div>
                 <div class="card--work-history">
-                    <strong>🎓 London Metropolitan University</strong>
+                    <strong>🎓 Лондон Метрополитен Университет</strong>
                     <br>
-                    <strong>📜 MSc Data Analytics</strong>
+                    <strong>📜 Магистр. Анализ Данных</strong>
                     <p>01/2022 - 07/2023</p>
-                    <p>Graduated with Distinction</p>
-                    <p>Successfully completed modules:</p>
+                    <p>Окончил с отличием</p>
+                    <p>Успешно пройденные модули:</p>
                     <ul>
-                        <li>Data Mining and Machine Learning</li>
-                        <li>Statistical Modelling and Forecasting</li>
-                        <li>Programming for Data Analytics (Python, R)</li>
-                        <li>Data Warehousing and Big Data</li>
-                        <li>Data Analysis and Visualization</li>
-                        <li>Financial Mathematics</li>
+                        <li>Добыча данных и машинное обучение</li>
+                        <li>Статистическое моделирование и прогнозирование</li>
+                        <li>Программирование для анализа данных (Python, R)</li>
+                        <li>Хранилище данных и большие данные</li>
+                        <li>Анализ данных и визуализация</li>
+                        <li>Финансовая математика</li>
                     </ul>
                 </div>
-
+            
                 <div class="card--work-history">
-                    <strong>🎓 Caspian State University of Technology and Engineering</strong>
+                    <strong>🎓 Каспийский государственный университет технологии и инженерии</strong>
                     <br>
-                    <strong>📜 MSc Mechanical Engineering</strong>
+                    <strong>📜 Магистр. Механическое инженерное дело</strong>
                     <p>01/2015 - 06/2017</p>
-                    <p>GPA: 3.39/4.0</p>
-                    <ul>
-
-                    </ul>
+                    <p>Средний балл: 3.39/4.0</p>
                 </div>
-
+            
                 <div class="card--work-history">
-                    <strong>🎓 L.N. Gumilyov Eurasian National University</strong>
+                    <strong>🎓 Л.Н. Гумилев Евразийский национальный университет</strong>
                     <br>
-                    <strong>📜 BSc Physics</strong>
+                    <strong>📜 Бакалавр. Физика</strong>
                     <p>01/2011 - 06/2015</p>
-                    <p>GPA: 3.07/4.0</p>
-                    <ul>
-
-                    </ul>
+                    <p>Средний балл: 3.07/4.0</p>
                 </div>
-
+            
                 <div class="line-break"></div>
             </section>
-
-
-            <section id="work-history-wrapper" class="section--page">
-                <h2>Awards and Achievements</h2>
-
+            
+            <section class="section--page">
+                <h2>Награды и достижения</h2>
+            
                 <div class="line-break"></div>
                 <div class="card--work-history">
-                    <strong>🏆 Bonas Macfarlane Grant</strong>
+                    <strong>🏆 Грант Bonas Macfarlane</strong>
                     <br>
-                    <p>Caspian State University of Technology and Engineering</p>
+                    <p>Каспийский государственный университет технологии и инженерии</p>
                     <p>2015 - 2016</p>
-                    
-                    <p>The English Language Program for the selected 50 students and teachers from the prestigious international school Bonas MacFarlane
-                        sponsored by <a href="https://yessenovfoundation.org/en/about-us/programs/knowledge/english-language-program/" target="_blank"><span></span>Shakhmardan Yessenov Foundation</a>.</p>
-                    <p>See certificate <a href="./assets/images/BonasMacFarlanceCertificate.jpg" target="_blank">here.</a></p>
-                    <ul>
-
-                    </ul>
+                    <p>Английский языковой программы для выбранных 50 студентов и преподавателей из престижной международной школы Bonas MacFarlane,
+                        спонсируемой Фондом имени Шахмардана Есенова.</p>
+                    <p>См. сертификат <a href="./assets/images/BonasMacFarlanceCertificate.jpg" target="_blank">здесь.</a></p>
                 </div>
-
+            
                 <div class="card--work-history">
-                    <strong>🏆 Internal "Rectors Grant"</strong>
+                    <strong>🏆 Внутренний "Грант Ректора"</strong>
                     <br>
-                    <p>L.N. Gumilyov Eurasian National University</p>
+                    <p>Л.Н. Гумилев Евразийский национальный университет</p>
                     <p>2012 - 2015</p>
-                    <p>For academic achievements and contribution to sports and healthy life-style within the 
-                        <a href="https://old.enu.kz/en/study/stoimost-obuchenia.php" target="_blank">University.</a></p>
-                        <p>Award includes full tuition fee waiver and monthly stipend.</p>
-                    <ul>
-                        
-                    </ul>
+                    <p>За академические достижения и вклад в спорт и здоровый образ жизни в рамках
+                        <a href="https://old.enu.kz/en/study/stoimost-obuchenia.php" target="_blank">Университета.</a></p>
+                    <p>Награда включает полное освобождение от оплаты за обучение и ежемесячное стипендиальное обеспечение.</p>
                 </div>
-
+            
                 <div class="line-break"></div>
             </section>
-
-            <!-- <section id="work-history-wrapper" class="section--page">
-                <h2>Work Experience</h2>
-
-                <div class="line-break"></div>
-                <div class="card--work-history">
-                    <strong>💼 DEVELOPER ADVOCATE | AGORA.IO</strong>
-                    <p>11/2021 - Present</p>
-                    <p>Worked on making Agora’s Web Based SDK more accessible through video tutorials, articles, demo projects and event based training. Also building out React UI components & leading a team to re-design Agora’s documentation and api reference.</p>
-                </div>
-
-                <div class="line-break"></div>
-
-            </section> -->
-
+            
             <section class="section--page">
-                <h2>Certificates</h2>
-
+                <h2>Сертификаты</h2>
+            
                 <div class="card--project">
-                    <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/KD4NYTQHW2QR" target="_blank"><span></span>📚 Google Data Analytics Specialization</a>
+                    <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/KD4NYTQHW2QR" target="_blank"><span></span>📚 Специализация Google по анализу данных</a>
                 </div>
-
+            
                 <div class="card--project">
-                    <a href="https://www.coursera.org/account/accomplishments/certificate/4GNGAXEWU3B9" target="_blank"><span></span>📚 Machine Learning</a>
+                    <a href="https://www.coursera.org/account/accomplishments/certificate/4GNGAXEWU3B9" target="_blank"><span></span>📚 Машинное обучение</a>
                 </div>
-
+            
                 <div class="card--project">
-                    <a href="./assets/CertificateOfCompletion_Python for Data Science Essential Training Part 1.pdf" target="_blank"><span></span>📚 Python for Data Science Essential Training</a>
+                    <a href="./assets/CertificateOfCompletion_Python for Data Science Essential Training Part 1.pdf" target="_blank"><span></span>📚 Основы Python для анализа данных</a>
                 </div>
-                
+            
                 <div class="card--project">
-                    <a href="./assets/CertificateOfCompletion_Advanced SQL for Data Scientists.pdf" target="_blank"><span></span>📚 Advanced SQL for Data Scientists</a>
+                    <a href="./assets/CertificateOfCompletion_Advanced SQL for Data Scientists.pdf" target="_blank"><span></span>📚 Продвинутый SQL для аналитиков данных</a>
                 </div>
-
+            
                 <div class="card--project">
-                    <a href="./assets/CertificateOfCompletion_Intermediate SQL for Data Scientists.pdf" target="_blank"><span></span>📚 Intermediate SQL for Data Scientists</a>
+                    <a href="./assets/CertificateOfCompletion_Intermediate SQL for Data Scientists.pdf" target="_blank"><span></span>📚 Промежуточный SQL для аналитиков данных</a>
                 </div>
-
+            
                 <div class="card--project">
-                    <a href="./assets/CertificateOfCompletion_SQL Essential Training.pdf" target="_blank"><span></span>📚 SQL Essential Training</a>
+                    <a href="./assets/CertificateOfCompletion_SQL Essential Training.pdf" target="_blank"><span></span>📚 Основы SQL</a>
                 </div>
-
+            
                 <div class="card--project">
-                    <a href="./assets/CertificateOfCompletion_Public Speaking for NonNative English Speakers.pdf" target="_blank"><span></span>📚 Public Speaking for Non-Native English Speakers</a>
+                    <a href="./assets/CertificateOfCompletion_Public Speaking for NonNative English Speakers.pdf" target="_blank"><span></span>📚 Публичное выступление для носителей неанглийского языка</a>
                 </div>
-
-
-
             </section>
-
+            
             <section class="section--page">
-                <h2>Projects</h2>
-
+                <h2>Проекты</h2>
+            
                 <div class="card--project">
-                    <a href="project1.html">✔️ <span></span>Customer Segmentation Using K-Means Clustering</a>
+                    <a href="project1.html">✔️ <span></span>Сегментация клиентов с использованием кластеризации K-Means</a>
                 </div>
-
+            
                 <div class="card--project">
-                    <a href="project2.html" >✔️ <span></span>Full-stack Data Management Application using Python Django Framework</a>
+                    <a href="project2.html" >✔️ <span></span>Приложение для управления данными с использованием фреймворка Python Django</a>
                 </div>
-
+            
                 <div class="card--project">
-                    <a href="project3.html" >✔️ <span></span>Scraping Google Maps Reviews for Analysis</a>
+                    <a href="project3.html" >✔️ <span></span>Парсинг отзывов на Google Maps для анализа</a>
                 </div>
-                
+            
                 <div class="card--project">
-                    <a href="project4.html" >✔️ <span></span>Financial Mathematics - Portfolio Management using RStudio</a>
+                    <a href="project4.html" >✔️ <span></span>Финансовая математика - Управление портфелем с использованием RStudio</a>
                 </div>
-
+            
                 <div class="card--project">
-                    <a href="project5.html" >✔️ <span></span>Power BI Dashboard</a>
+                    <a href="project5.html" >✔️ <span></span>Приборная панель Power BI</a>
                 </div>
-
+            
                 <div class="card--project">
-                    <a href="project6.html" >✔️ <span></span>A/B Testing using Python Pandas and SciPy</a>
+                    <a href="project6.html" >✔️ <span></span>A/B тестирование с использованием Python Pandas и SciPy</a>
                 </div>
-
             </section>
+            
 
 
        

@@ -80,3 +80,26 @@ function updateToggleElements(isDarkMode) {
         moon.style.backgroundColor = '#f0f0f0';
     }
 }
+
+
+            function changeLanguageEn() {
+                var selectedLanguage = document.getElementById("languageSelect").value;
+                // Load the appropriate HTML file based on the selected language
+                if (selectedLanguage === 'en') {
+                  window.location.href = 'resume.html';
+                } else if (selectedLanguage === 'ru') {
+                  window.location.href = 'resume_ru.html';
+                }
+              }
+
+
+            function changeLanguageRu() {
+                var selectedLanguage = document.getElementById("languageSelect").value;
+                // Load the appropriate HTML file based on the selected language
+                if (selectedLanguage === 'ru') {
+                  window.location.href = 'resume.html';
+                } else if (selectedLanguage === 'en') {
+                  window.location.href = 'resume_ru.html';
+                }
+              }
+
