@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+
+<style>
+    figure {
+        margin: 0;
+        padding: 0;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+</style>
+
+<html>
+    <head>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-D9B2S4CNM1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-D9B2S4CNM1');
+        </script>
+        
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Massan Sarsenbayev - Data Analyst</title>
+        <meta name="keywords" content="data analysis, data scientist, big data, data mining, machine learning, statistics, visualization, power bi, tableau, exel pivot table, business intelligence.">
+        <meta name="description" content="Data Analysis services using Python, R, Power BI, Tableau and Excel.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./styles/main.css?v=2">
+
+        <!-- Favicon -->
+        <link href="./assets/images/favicon/favicon.ico" rel="icon">
+    </head>
+    <body>
+        <div id="container--main">
+            <a href="resume.html">&#x2190; Go Back</a>
+            <h1>MS Excel Project</h1>
+
+            <ul>
+                <li><a href="./assets/images/project7/ТАУЧИК.xlsx" target="_blank">Download Excel Spreadsheet</a></li>
+            </ul>
+            <p>
+                One day local business owner contacted me to help with their excel spreadsheet, saying that 
+                they were struggling to get a daily and monthly summary data.
+                The business was designed around production of a "Crushed stone" in a quarry outside of a city.
+                They provided me with a excel spreadsheet that looked like in below picture.
+            </p>
+
+            <figure>
+                <img src="assets\images\project7\providedexcelsheet.png" alt="Provided Excel spreadsheet" width="750">
+                <center><figcaption>Excel spreadsheet they provided</figcaption></center>
+            </figure>
+
+            <p>
+                Basically there was a seperate table in a new sheet for a different day. So, there were 
+                30 different sheets and tables for one month only. And there was no way to get summary out of it
+                easy way.
+            </p>
+
+            <p>
+                I decided to contact business owner and clarify some questions I had and learned that
+                they own one quarry, two Crushing and Screening Complex, one Excavator, three Dump trucks.
+            </p>
+
+            <p>
+                Their daily production goal was minimum 500 tonns of 5-20mm aggregates. But they did not know
+                how much exactly they are producing in daily average. And they were struggling to calculate if it was 
+                viable to rent another Excavator and several Dump trucks to increase their production or 
+                at least avoid down time if one of the equipments broken down.
+            </p>
+
+            <p>
+                With the minimum information in hand I started creating a seperate tables for different
+                Crushing and Screening Complexes. The table includes:
+                <li>How many tonns of stones every Excavator crushed</li>
+                <li>How many tonns of stones each Dump truck delivered</li>
+                <li>How many tonns of aggregates each Complex produced by size</li>
+                <br>
+                So, I have two tables for every Complex that look like in the picture below: 
+            </p>
+
+            <figure>
+                <img src="assets\images\project7\DSK1.png" alt="DSK1" width="750">
+                <center><figcaption>Table for Crushing and Screening Complex 1</figcaption></center>
+            </figure>
+
+            <p>
+                And the summary table must have been created to get a total number of aggregates created daily.
+                I used a date as a starting point and used -sumif() function to get summary of aggregates two Complexes 
+                produced for each day. The summary table looks like in a picture below:
+            </p>
+
+            <figure>
+                <img src="assets\images\project7\summary.png" alt="summary" width="750">
+                <center><figcaption>Summary Table</figcaption></center>
+            </figure>
+            
+            <p>
+                This table consists of aggregates from each Complex by day and by size. And from this table
+                it will be possible to get a statistical data for every Excavator, every Dump truck and every Complex.
+                And we can use PivotTable to do it much faster and easier.
+            </p>
+
+            <figure>
+                <img src="assets\images\project7\stats.png" alt="stats" width="750">
+                <center><figcaption>PivotTable and Pivot Chart for one month</figcaption></center>
+            </figure>
+
+            <p>
+                From this data it was obvious that business was not achieving their daily goal of 500 tonns 
+                of aggregates. In fact the daily average was 262 tonns. Which is almost two times less and mostly 
+                was due to frequent Excavator issues. Half of the month the Excavator was out of service. 
+                Since they had only one Excavator those days production was zero.
+            </p>
+
+            <figure>
+                <img src="assets\images\project7\chart.png" alt="chart" width="750">
+                <center><figcaption>Daily production</figcaption></center>
+            </figure>
+
+            <p>
+                If they had second Excavator and kept production going with the daily average 500 tonns aggregates,
+                the company would make 32,500,000.00 monthly. And their loss every month due to Excavator issues
+                was 15,000,000.00. 
+            </p>
+
+            <p>
+                The Excavator rent price was around 2 million a month. It means company could double their monthly revenue
+                just renting extra Excavator. 
+            </p>
+
+            <p>
+                NOTE: Names and data changed for demonstrative purposes.
+            </p>
+ 
+           
+        </div>
+    </body>
+    <script src="script.js"></script>
+</html>
