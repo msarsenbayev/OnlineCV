@@ -25,12 +25,12 @@ body
 label {
     display: block;
     position: absolute;
-    top: 54px; /* Adjusted top position */
-    right: 23px; /* Adjusted right position */
-    width: 83.52px; /* Adjusted width to be 10% smaller than previous */
-    height: 40.32px; /* Adjusted height to be 10% smaller than previous */
+    top: 54px;
+    right: 23px;
+    width: 83.52px;
+    height: 40.32px;
     background-color: #77b5fe;
-    border-radius: 40.32px; /* Adjusted border radius */
+    border-radius: 40.32px;
     border: 1.5px solid #fff;
     border-color: white;
     transform: translateY(-50%);
@@ -42,10 +42,10 @@ label {
 #star
 {
     position: absolute;
-    top: 9.36px; /* Adjusted top position */
-    left: 9.36px; /* Adjusted left position */
-    width: 21.6px; /* Adjusted width to be 10% smaller than previous */
-    height: 21.6px; /* Adjusted height to be 10% smaller than previous */
+    top: 9.36px;
+    left: 9.36px;
+    width: 21.6px;
+    height: 21.6px;
     background-color: #fafd0f;
     transform: scale(1);
     border-radius: 50%;
@@ -67,9 +67,9 @@ label {
 .star
 {
     top: 0;
-    left: -3.92px; /* Adjusted left position */
-    font-size: 38.88px; /* Adjusted font size to be 10% smaller than previous */
-    line-height: 20.16px; /* Adjusted line height to be 10% smaller than previous */
+    left: -3.92px;
+    font-size: 38.88px;
+    line-height: 20.16px;
     color: #fafd0f;
     transition: 0.3s ease color;
 }
@@ -77,10 +77,10 @@ label {
 #moon
 {
     position: absolute;
-    bottom: -37.44px; /* Adjusted bottom position */
-    right: 5.76px; /* Adjusted right position */
-    width: 28.8px; /* Adjusted width to be 10% smaller than previous */
-    height: 28.8px; /* Adjusted height to be 10% smaller than previous */
+    bottom: -37.44px;
+    right: 5.76px;
+    width: 28.8px;
+    height: 28.8px;
     background-color: #fff;
     border-radius: 50%;
     transition: 0.3s ease bottom;
@@ -90,10 +90,10 @@ label {
 {
     content: "";
     position: absolute;
-    top: -8.64px; /* Adjusted top position */
-    left: -12.24px; /* Adjusted left position */
-    width: 28.8px; /* Adjusted width to be 10% smaller than previous */
-    height: 28.8px; /* Adjusted height to be 10% smaller than previous */
+    top: -8.64px;
+    left: -12.24px;
+    width: 28.8px;
+    height: 28.8px;
     background-color:#03a9f4;
     border-radius: 50%;
     transition: 0.3s ease background-color;
@@ -107,8 +107,8 @@ label {
 
 #toggle_checkbox:checked + label #star
 {
-    top: 2.16px; /* Adjusted top position */
-    left: 46.08px; /* Adjusted left position */
+    top: 2.16px;
+    left: 46.08px;
     transform: scale(0.3);
     background-color: yellow;
 }
@@ -120,7 +120,7 @@ label {
 
 #toggle_checkbox:checked + label #moon
 {
-    bottom: 5.76px; /* Adjusted bottom position */
+    bottom: 5.76px;
 }
 
 #toggle_checkbox:checked + label #moon:before
@@ -342,49 +342,195 @@ label {
 }
 
 #myname{
-    font-size: 78px;
-    line-height: 1em;
-    font-family: 'Dancing Script', cursive
+    font-size: 72px;
+    line-height: 1.3em;
+    font-family: 'Dancing Script', cursive;
+    background: linear-gradient(135deg, var(--mainTextColor) 0%, #0da2b8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: none;
+    margin-bottom: 0.2em;
+    padding-bottom: 5px;
+}
+
+#wrapper--hero h3 {
+    font-size: 28px;
+    font-weight: 300;
+    color: var(--secondaryTextColor);
+    margin: 0.5em 0;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+#wrapper--hero p {
+    font-size: 16px;
+    color: var(--mainLinkColor);
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.profile-container {
+    position: relative;
+    margin-bottom: 1.5em;
+}
+
+#profile-pic {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid var(--mainLinkColor);
+    box-shadow: 0 10px 40px rgba(13, 162, 184, 0.3);
+    transition: all 0.4s ease;
+}
+
+#profile-pic:hover {
+    transform: scale(1.05) rotate(3deg);
+    box-shadow: 0 15px 50px rgba(13, 162, 184, 0.5);
+}
+
+.profile-ring {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 180px;
+    height: 180px;
+    border: 3px dashed var(--mainLinkColor);
+    border-radius: 50%;
+    opacity: 0.4;
+    animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+    from { transform: translateX(-50%) rotate(0deg); }
+    to { transform: translateX(-50%) rotate(360deg); }
 }
 
 
 /* Below starts style for linktree links */
 
 .card {
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin: 0;
-  max-width: 700px;
+    border: none;
+    border-radius: 16px;
+    background: linear-gradient(145deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.6) 100%);
+    box-shadow: 
+        0 4px 20px rgba(0, 0, 0, 0.08),
+        0 1px 3px rgba(0, 0, 0, 0.05),
+        inset 0 1px 0 rgba(255,255,255,0.8);
+    margin: 0;
+    max-width: 700px;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    position: relative;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #0da2b8, #77b5fe, #0da2b8);
+    background-size: 200% 100%;
+    animation: shimmer 3s ease infinite;
+}
+
+@keyframes shimmer {
+    0%, 100% { background-position: 200% 0; }
+    50% { background-position: -200% 0; }
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 
+        0 12px 40px rgba(13, 162, 184, 0.2),
+        0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .card-header {
-    /* background-color: var(--mainTextColor); */
-  color: var(--mainTextColor);
-  font-size: 24px;
-  padding: 13px;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
+    color: var(--mainTextColor);
+    font-size: 24px;
+    padding: 13px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }
 
 .card-body {
-  padding: 15px;
+    padding: 20px 24px;
+}
+
+.card h1 {
+    margin: 0;
+    font-size: 22px;
+}
+
+.card h1 a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: var(--mainTextColor);
+    font-weight: 600;
+    transition: all 0.3s ease;
+    position: relative;
+    padding: 4px 0;
+}
+
+.card h1 a i {
+    font-size: 26px;
+    color: var(--mainLinkColor);
+    transition: all 0.3s ease;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background: linear-gradient(135deg, rgba(13, 162, 184, 0.1) 0%, rgba(119, 181, 254, 0.1) 100%);
+}
+
+.card:hover h1 a i {
+    transform: scale(1.1) rotate(5deg);
+    background: linear-gradient(135deg, rgba(13, 162, 184, 0.2) 0%, rgba(119, 181, 254, 0.2) 100%);
+    box-shadow: 0 4px 12px rgba(13, 162, 184, 0.3);
+}
+
+.card h1 a:hover {
+    color: var(--mainLinkColor);
 }
 
 .card-title {
-  font-size: 24px;
-  font-weight: bold;
+    font-size: 24px;
+    font-weight: bold;
 }
 
 .card-text {
-  font-size: 16px;
-  line-height: 1.5;
+    font-size: 16px;
+    line-height: 1.5;
 }
 
 img {
-        max-width: 100%;
-        height: auto;
-    }
+    max-width: 100%;
+    height: auto;
+}
+
+.links-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 20px 0;
+}
+
+/* Dark mode card adjustments */
+.light-mode .card {
+    background: linear-gradient(145deg, rgba(30,35,40,0.9) 0%, rgba(20,25,30,0.8) 100%);
+    box-shadow: 
+        0 4px 20px rgba(0, 0, 0, 0.3),
+        0 1px 3px rgba(0, 0, 0, 0.2);
+}
 
 
 
@@ -450,137 +596,75 @@ img {
         </label>
 
     <div id="container--main">
-<br>
-<br>
             <section id="wrapper--hero" class="section--page">
-                <!-- <img id="profile-pic" src="./assets/images/profile_pic.JPG"> -->
                 <div>
                     <center>
-                        <h1 id="myname">Massan Sarsenbayev</h1>
-                        <br>
+                        <div class="profile-container">
+                            <div class="profile-ring"></div>
+                            <img id="profile-pic" src="./assets/images/profile_pic.JPG" alt="Massan Sarsenbayev">
+                        </div>
+                        <h1 id="myname" style="font-family: 'Dancing Script', cursive">Massan Sarsenbayev</h1>
                         <h3>Data Analyst</h3>
-                        <p>massan.sarsenbayev@hotmail.com</p>
+                        <p><i class="bi bi-envelope-fill" style="margin-right: 8px; color: var(--mainLinkColor);"></i>masan.sarsenbayev@gmail.com</p>
                     </center>
                 </div>  
             </section>
+            
+            <div class="links-container">
 
-            <!-- <section class="section--page">
-        
-                <div id="navbar">
-                    <h2><a href="resume.html" >Resume</a></h2>
-                    <h2><a href="mainblogpage.html" >Personal Blog</a></h2>
+<!-- 
+                <div class="card">
+                    <div class="card-body">
+                        <h1><a href="https://products.massan-sarsenbayev.com/"><i class="bi bi-cart-check"></i> My Products</a></h1>
+                    </div>
+                </div> -->
+
+                <div class="card">
+                    <div class="card-body">
+                        <h1><a href="resume.html"><i class="bi bi-file-person-fill"></i> Resume</a></h1>
+                    </div>
                 </div>
-            </section> -->
 
-            <br>
-
-            <div class="card">
-                <div class="card-body">
-                  <h1><a href="https://products.massan-sarsenbayev.com/" style="color: var(--mainTextColor); font-weight: bold;"><i class="bi bi-cart-check"></i> My products</a></h1> 
-                  <p class="card-text"></p>
-                  <!-- <a href="blogpage1.html" class="btn btn-primary">Read-></a> -->
+                <div class="card">
+                    <div class="card-body">
+                        <h1><a href="https://www.linkedin.com/in/msarsenbayev/"><i class="bi bi-linkedin"></i> LinkedIn</a></h1>
+                    </div>
                 </div>
-            </div>
 
-            <br>
-
-            <div class="card">
-                <div class="card-body">
-                  <h1><a href="resume.html" style="color: var(--mainTextColor); font-weight: bold;"><i class="bi bi-file-person-fill"></i> Resume</a></h1> 
-                  <p class="card-text"></p>
-                  <!-- <a href="blogpage1.html" class="btn btn-primary">Read-></a> -->
+                <div class="card">
+                    <div class="card-body">
+                        <h1><a href="https://github.com/msarsenbayev"><i class="bi bi-github"></i> GitHub</a></h1>
+                    </div>
                 </div>
-            </div>
 
-            <br>
-
-            <div class="card">
-                <div class="card-body">
-                  <h1><a href="https://www.linkedin.com/in/msarsenbayev/" style="color: var(--mainTextColor); font-weight: bold;"><i class="bi bi-linkedin"></i> Linkedin</a></h1>
-                  <p class="card-text"></p>
-                  <!-- <a href="blogpage1.html" class="btn btn-primary">Read-></a> -->
+                <div class="card">
+                    <div class="card-body">
+                        <h1><a href="https://www.upwork.com/freelancers/~01365b02a4ae6e6ecc?mp_source=share"><i class="bi bi-chat-right-dots"></i> Upwork</a></h1>
+                    </div>
                 </div>
-            </div>
 
-            <br>
-
-            <div class="card">
-                <div class="card-body">
-                    <h1><a href="https://github.com/msarsenbayev" style="color: var(--mainTextColor); font-weight: bold;"><i class="bi bi-github"></i> Github</a></h1>
-                  <p class="card-text"></p>
-                  <!-- <a href="blogpage1.html" class="btn btn-primary">Read-></a> -->
+                <div class="card">
+                    <div class="card-body">
+                        <h1><a href="https://visitaktau.massan-sarsenbayev.com/"><i class="bi bi-suitcase"></i> Visit Aktau</a></h1>
+                    </div>
                 </div>
-            </div>
 
-            <br>
-
-            <div class="card">
-                <div class="card-body">
-                    <h1><a href="https://www.upwork.com/freelancers/~01365b02a4ae6e6ecc?mp_source=share" style="color: var(--mainTextColor); font-weight: bold;"><i class="bi bi-chat-right-dots"></i> Upwork</a></h1>
-                  <p class="card-text"></p>
-                  <!-- <a href="blogpage1.html" class="btn btn-primary">Read-></a> -->
+                <div class="card">
+                    <div class="card-body">
+                        <h1><a href="https://nuraman.massan-sarsenbayev.com/"><i class="bi bi-view-stacked"></i> Service Request</a></h1>
+                    </div>
                 </div>
-            </div>
 
-            <br>
-
-            <div class="card">
-                <div class="card-body">
-                    <h1><a href="https://www.visitaktau.com" style="color: var(--mainTextColor); font-weight: bold;"><i class="bi bi-suitcase"></i> Visit Aktau</a></h1>
-                  <p class="card-text"></p>
-                  <!-- <a href="blogpage1.html" class="btn btn-primary">Read-></a> -->
-                </div>
-            </div>
-
-            <br>
-
-            <div class="card">
-                <div class="card-body">
-                    <h1><a href="https://nuraman.kasip.online/" style="color: var(--mainTextColor); font-weight: bold;"><i class="bi bi-view-stacked"></i> Service Request</a></h1>
-                  <p class="card-text"></p>
-                  <!-- <a href="blogpage1.html" class="btn btn-primary">Read-></a> -->
-                </div>
-            </div>
-
-            <br>
-
-            <div class="card">
-                <div class="card-body">
-                    <h1><a href="https://booking-app.kasip.online/" style="color: var(--mainTextColor); font-weight: bold;"><i class="bi bi-calendar-check"></i> Appointment booking app</a></h1>
-                  <p class="card-text"></p>
-                  <!-- <a href="blogpage1.html" class="btn btn-primary">Read-></a> -->
-                </div>
+                <!-- <div class="card">
+                    <div class="card-body">
+                        <h1><a href="https://booking-app.kasip.online/"><i class="bi bi-calendar-check"></i> Appointment Booking App</a></h1>
+                    </div>
+                </div> -->
             </div>
             
-
-            <!-- <canvas id="myChart" width="400" height="200"></canvas>
-            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-            <script>
-            var ctx = document.getElementById('myChart').getContext('2d');
-            var myChart = new Chart(ctx, {
-                type: 'line',
-                data: {
-                    labels: ['January', 'February', 'March', 'April', 'May', 'June'],
-                    datasets: [{
-                        label: 'Sample Data',
-                        data: [12, 19, 3, 5, 2, 3],
-                        backgroundColor: 'rgba(75, 192, 192, 0.2)',
-                        borderColor: 'rgba(75, 192, 192, 1)',
-                        borderWidth: 1
-                    }]
-                },
-                options: {
-                    scales: {
-                        y: {
-                            beginAtZero: true
-                        }
-                    }
-                }
-            });
-            </script> -->
-
-
-
+            <footer style="text-align: center; padding: 40px 20px 20px; color: var(--secondaryTextColor); font-size: 14px;">
+                <p>&copy; 2026 Massan Sarsenbayev. All rights reserved.</p>
+            </footer>
     </div>
 
     </body>
