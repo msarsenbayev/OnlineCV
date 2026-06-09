@@ -343,7 +343,7 @@ label {
 }
 
 #myname{
-    font-size: 72px;
+    font-size: 56px;
     line-height: 1.3em;
     font-family: 'Dancing Script', cursive;
     background: linear-gradient(135deg, var(--mainTextColor) 0%, #0da2b8 100%);
@@ -353,6 +353,27 @@ label {
     text-shadow: none;
     margin-bottom: 0.2em;
     padding-bottom: 5px;
+}
+
+#container--main {
+    width: min(100%, 600px);
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+#wrapper--hero {
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.links-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 20px 0;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 #wrapper--hero h3 {
@@ -429,6 +450,7 @@ label {
     transition: all 0.3s ease;
     overflow: hidden;
     position: relative;
+    width: 100%; max-width: 100%;
 }
 
 .card::before {
@@ -527,6 +549,7 @@ img {
     flex-direction: column;
     gap: 16px;
     padding: 20px 0;
+    width: min(100%, 700px); margin: 0 auto;
 }
 
 /* Dark mode card adjustments */
@@ -608,7 +631,7 @@ img {
                             <!-- <div class="profile-ring"></div> -->
                             <img id="profile-pic" src="./assets/images/profile_pic.JPG" alt="Massan Sarsenbayev">
                         </div>
-                        <h1 id="myname" style="font-family: 'Dancing Script', cursive">Massan Sarsenbayev</h1>
+                        <h1 id="myname" style="font-family: 'Roboto Slab', serif">Massan Sarsenbayev</h1>
                         <!-- <h4 style="font-weight: normal;">MSc Data Analytics | MSc Mechanical Engineering | BSc Physics</h4> -->
                         <h4 style="font-weight: normal;">MSc Data Analytics</h4>
                         <h4 style="font-weight: normal;">MSc Mechanical Engineering</h4>
